@@ -1,0 +1,114 @@
+/* Profile Page */
+.profile-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .edit-btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background: #e05500;
+  }
+  
+  /* Campaign List */
+  .campaigns-list {
+    text-align: left;
+  }
+  
+  .campaign-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .campaign-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .campaign-info h4 {
+    margin: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .campaign-item {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  .page-content {
+    margin-top: 80px; /* Adjust this based on navbar height */
+  }
+  
+  /* Ensure content doesn't overlap with the navbar */
+.page-content {
+    margin-top: 80px;
+    padding: 20px;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 1024px) {
+    .page-content {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-content {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-content {
+      padding: 5px;
+      font-size: 14px; /* Reduce font size for mobile */
+    }
+  }
+  
+  /* Make input fields & buttons responsive */
+input, textarea, button {
+    width: 100%;
+    max-width: 600px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    input, textarea, button {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+  

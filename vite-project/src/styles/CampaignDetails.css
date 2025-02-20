@@ -1,0 +1,97 @@
+.campaign-details {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .campaign-header {
+    margin-bottom: 20px;
+  }
+  
+  .campaign-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .campaign-stats {
+    margin: 20px 0;
+  }
+  
+  progress {
+    width: 100%;
+    height: 20px;
+  }
+  
+  .donate-btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .donate-btn:hover {
+    background: #cc5500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .campaign-details {
+      padding: 10px;
+    }
+  
+    .donate-btn {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+  
+  .page-content {
+    margin-top: 80px; /* Adjust this based on navbar height */
+  }
+  
+  /* Ensure content doesn't overlap with the navbar */
+.page-content {
+    margin-top: 80px;
+    padding: 20px;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 1024px) {
+    .page-content {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-content {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-content {
+      padding: 5px;
+      font-size: 14px; /* Reduce font size for mobile */
+    }
+  }
+  
+  /* Make input fields & buttons responsive */
+input, textarea, button {
+    width: 100%;
+    max-width: 600px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    input, textarea, button {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+  

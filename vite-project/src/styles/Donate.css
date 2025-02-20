@@ -1,0 +1,80 @@
+.donate-page {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #cc5500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .donate-page {
+      width: 90%;
+    }
+  }
+  
+  .page-content {
+    margin-top: 80px; /* Adjust this based on navbar height */
+  }
+  
+  /* Ensure content doesn't overlap with the navbar */
+.page-content {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .page-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content {
+    padding: 5px;
+    font-size: 14px; /* Reduce font size for mobile */
+  }
+}

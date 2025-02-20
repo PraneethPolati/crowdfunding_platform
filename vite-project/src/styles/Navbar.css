@@ -1,0 +1,115 @@
+/* Basic Navbar Styling */
+.navbar {
+    background: #222;
+    color: white;
+    padding: 12px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navbar Container */
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .nav-logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+  }
+  
+  .nav-logo:hover {
+    color: #f8b400;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgb(245, 5, 5);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Mobile Menu Toggle */
+  .menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    color: #f8b400;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 250px;
+      background: #222;
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      padding: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      padding: 12px 0;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .nav-links {
+      display: flex !important;
+      position: static;
+      background: transparent;
+      flex-direction: row;
+    }
+  }
+  

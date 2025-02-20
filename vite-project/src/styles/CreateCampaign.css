@@ -1,0 +1,74 @@
+/* Page Styling */
+.create-campaign {
+    max-width: 500px;
+    margin: 80px auto 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Title Styling */
+  .create-campaign h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Inputs */
+  .create-campaign form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Labels */
+  .create-campaign label {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  /* Inputs and Select */
+  .create-campaign input,
+  .create-campaign textarea,
+  .create-campaign select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Button Styling */
+  .create-campaign .btn {
+    width: 100%;
+    padding: 10px;
+    background: #f8b400;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .create-campaign .btn:hover {
+    background: #d49400;
+  }
+  
+  /* Live Image Preview */
+  .image-preview {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .create-campaign {
+      max-width: 90%;
+    }
+  }
+  
