@@ -1,12 +1,21 @@
-import React from 'react';
-
-import { useState } from "react";
+import React, { useState } from "react";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import "../styles/Profile.css";
 
 const Profile = () => {
-  const [user, setUser] = useState({
-    name: "John Doe",
-    email: "johndoe@example.com",
+  const { user, logout } = useAuth(); // Get user and logout function from AuthContext
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login"); // Redirect to login after logout
+  };
+
+  // Dummy user data (will be replaced with actual user data from context)
+  const [profile, setProfile] = useState({
+    name: user?.name || "John Doe",
+    email: user?.email || "johndoe@example.com",
     bio: "Passionate about innovative projects!",
     avatar: "https://via.placeholder.com/100",
   });
@@ -14,11 +23,12 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <div className="profile-card">
-        <img src={user.avatar} alt="User Avatar" className="profile-avatar" />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-        <p>{user.bio}</p>
+        <img src={profile.avatar} alt="User Avatar" className="profile-avatar" />
+        <h2>{profile.name}</h2>
+        <p>{profile.email}</p>
+        <p>{profile.bio}</p>
         <button className="edit-btn">Edit Profile</button>
+        <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </div>
 
       <div className="campaigns-list">

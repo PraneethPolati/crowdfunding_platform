@@ -21,7 +21,8 @@ const Navbar = () => {
           <li><Link to="/create-campaign" onClick={() => setMenuOpen(false)}>Create Campaign</Link></li>
           <li><Link to="/profile" onClick={() => setMenuOpen(false)}>Profile</Link></li>
           <li><Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link></li>
-
+          <li><Link to="/login" className="login-btn">Login</Link></li>
+          <li><Link to="/signup" className="signup-btn">Sign Up</Link></li>
         </ul>
 
         {/* Mobile Menu Button */}

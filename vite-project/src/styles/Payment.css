@@ -1,0 +1,25 @@
+.payment-container {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .payment-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .payment-container button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .payment-container button:hover {
+    background-color: darkgreen;
+  }
+  
