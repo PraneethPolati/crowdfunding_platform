@@ -26,6 +26,7 @@ exports.getAllCampaigns = async (req, res) => {
     const campaigns = await Campaign.find().populate("createdBy", "name email");
     res.status(200).json(campaigns);
   } catch (error) {
+    console.error("Error fetching campaigns:", error); // Log the error
     res.status(500).json({ message: "Server error", error });
   }
 };
@@ -39,6 +40,7 @@ exports.getCampaignById = async (req, res) => {
     }
     res.status(200).json(campaign);
   } catch (error) {
+    console.error("Error fetching campaign by ID:", error); // Log the error
     res.status(500).json({ message: "Server error", error });
   }
 };

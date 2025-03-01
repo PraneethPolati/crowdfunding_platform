@@ -1,17 +1,13 @@
-
 const mongoose = require("mongoose");
 
 const campaignSchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
   goalAmount: { type: Number, required: true },
-  raisedAmount: { type: Number, default: 0 },
-  category: { type: String, required: true },
-  deadline: { type: Date, required: true },
-  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" }, // Reference to User
-  backers: [{ userId: mongoose.Schema.Types.ObjectId, amount: Number }], // Users who donated
-  createdAt: { type: Date, default: Date.now }
-});
+  currentAmount: { type: Number, default: 0 },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+  status: { type: String, enum: ["pending", "approved", "suspended"], default: "pending" },
+  fundsDisbursed: { type: Boolean, default: false }, // New field
+}, { timestamps: true });
 
-const Campaign = mongoose.model("Campaign", campaignSchema);
-module.exports = Campaign;
+module.exports = mongoose.model("Campaign", campaignSchema);

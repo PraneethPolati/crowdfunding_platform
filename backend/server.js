@@ -5,6 +5,8 @@ const dotenv = require("dotenv");
 
 const userRoutes = require("./routes/userRoutes"); 
 const campaignRoutes = require("./routes/campaignRoutes");
+const adminRoutes = require("./routes/adminRoutes"); // Import admin routes
+const authRoutes = require("./routes/authRoutes");
 
 // Load environment variables
 dotenv.config();
@@ -16,10 +18,10 @@ app.use(cors());
 app.use(express.json()); // Parse JSON requests
 
 // Routes
-app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes); 
-app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/campaigns", campaignRoutes);
+app.use("/api/admin", adminRoutes); // Use admin routes
 
 // Default Route
 app.get("/", (req, res) => {
