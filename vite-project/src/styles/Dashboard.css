@@ -1,95 +1,75 @@
+/* Global Styles */
 .dashboard {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  h3 {
-    margin-top: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    background: #f9f9f9;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-  }
-  
-  .create-btn {
-    margin-top: 20px;
-    padding: 10px 15px;
-    background: #ff6600;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .create-btn:hover {
-    background: #cc5500;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .dashboard {
-      width: 90%;
-    }
-  }
-  
-  .page-content {
-    margin-top: 80px; /* Adjust this based on navbar height */
-  }
-  
-  /* Ensure content doesn't overlap with the navbar */
-.page-content {
-  margin-top: 80px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
 }
 
-/* Responsive Layout */
-@media (max-width: 1024px) {
-  .page-content {
-    padding: 15px;
-  }
+/* Header Section */
+.dashboard h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-@media (max-width: 768px) {
-  .page-content {
-    padding: 10px;
-  }
+.dashboard p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
 }
 
-@media (max-width: 480px) {
-  .page-content {
-    padding: 5px;
-    font-size: 14px; /* Reduce font size for mobile */
-  }
+/* Campaigns Section */
+.dashboard h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-/* Make input fields & buttons responsive */
-input, textarea, button {
-  width: 100%;
-  max-width: 600px;
-  font-size: 1rem;
+.dashboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard li {
+  background-color: #fff;
   padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-  input, textarea, button {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
+.dashboard li strong {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Create New Campaign Button */
+.create-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.create-btn:hover {
+  background-color: #3e8e41;
+  transform: scale(1.05);
+}
+
+/* No Campaigns Message */
+.dashboard p {
+  font-size: 18px;
+  color: #666;
 }
